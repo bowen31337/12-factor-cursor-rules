@@ -1,0 +1,9 @@
+{
+  "action": "send_email",
+  "params": {
+    "to": "not-an-email",
+    "subject": "Missing body"
+  },
+  "confidence": 0.4,
+  "explain": "Incomplete request"
+}

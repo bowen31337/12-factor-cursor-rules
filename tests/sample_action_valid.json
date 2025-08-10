@@ -1,0 +1,10 @@
+{
+  "action": "send_email",
+  "params": {
+    "to": "alice@example.com",
+    "subject": "Hello from agent",
+    "body": "This is a test email."
+  },
+  "confidence": 0.95,
+  "explain": "User asked to notify Alice"
+}
