@@ -1,4 +1,4 @@
-# 12-Factor Cursor Rules v3
+# 12-Factor Cursor Rules
 
 A comprehensive implementation of the **12-Factor Agents** methodology for Cursor AI, featuring structured tool schemas, validation systems, and best practices for AI agent development.
 
@@ -26,7 +26,7 @@ The project follows the **12-Factor Agents** methodology:
 ## 📁 Project Structure
 
 ```
-12-factor-cursor-rules-v3/
+12-factor-cursor-rules/
 ├── ops/
 │   └── tool-schemas/          # JSON Schema definitions for tools
 │       └── send_email.json    # Email tool schema
@@ -44,18 +44,43 @@ The project follows the **12-Factor Agents** methodology:
 
 - Python 3.8+
 - Cursor AI
+- Git with SSH key configured (for SSH access)
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/bowen31337/12-factor-cursor-rules-v3.git
-cd 12-factor-cursor-rules-v3
+# Using SSH (recommended)
+git clone git@github.com:bowen31337/12-factor-cursor-rules.git
+cd 12-factor-cursor-rules
+
+# Or using HTTPS
+git clone https://github.com/bowen31337/12-factor-cursor-rules.git
+cd 12-factor-cursor-rules
 ```
 
 2. Install dependencies:
 ```bash
 pip install jsonschema
+```
+
+### SSH Setup (Optional but Recommended)
+
+If you prefer using SSH for secure authentication:
+
+1. Generate an SSH key (if you don't have one):
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+2. Add the SSH key to your GitHub account:
+   - Copy your public key: `cat ~/.ssh/id_ed25519.pub`
+   - Go to GitHub Settings → SSH and GPG keys → New SSH key
+   - Paste your public key and save
+
+3. Test your SSH connection:
+```bash
+ssh -T git@github.com
 ```
 
 ### Validation
@@ -245,9 +270,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/bowen31337/12-factor-cursor-rules-v3/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/bowen31337/12-factor-cursor-rules-v3/discussions)
-- **Documentation**: [Wiki](https://github.com/bowen31337/12-factor-cursor-rules-v3/wiki)
+- **Issues**: [GitHub Issues](https://github.com/bowen31337/12-factor-cursor-rules/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/bowen31337/12-factor-cursor-rules/discussions)
+- **Documentation**: [Wiki](https://github.com/bowen31337/12-factor-cursor-rules/wiki)
 
 ---
 
