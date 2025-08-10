@@ -1,0 +1,16 @@
+---
+description: Tool schema & validation guidelines.
+globs: []
+alwaysApply: true
+---
+- Every tool must have a machine-readable JSON Schema stored in `/ops/tool-schemas/<tool>.json`.
+- Assistant must not emit free-text API calls. All tool invocations must conform to the schema.
+- If JSON Schema validation fails, return an `error` object describing which field failed and why.
+- Example tool invocation snippet:
+
+```json
+{
+  "action":"send_email",
+  "params": {"to":"x@y", "subject":"...", "body":"..."}
+}
+```

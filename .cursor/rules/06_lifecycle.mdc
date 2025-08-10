@@ -1,0 +1,8 @@
+---
+description: Support deterministic lifecycle operations for runs.
+globs: []
+alwaysApply: true
+---
+- Commands available: `START`, `PAUSE`, `RESUME`, `CANCEL`, `REPLAY`.
+- On `PAUSE`, persist `state` and `audit_log` and surface a human-readable "why paused" reason.
+- On `RESUME`, verify `prev_state_hash` and show diff of resumed context.

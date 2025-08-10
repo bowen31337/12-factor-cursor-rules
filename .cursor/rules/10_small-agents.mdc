@@ -1,0 +1,8 @@
+---
+description: Prefer single-purpose agents; compose via orchestrator.
+globs: []
+alwaysApply: false
+---
+- When asked to build a multi-domain agent, suggest splitting into sub-agents and show a composition diagram.
+- Default agent scope: single domain/intent family, ≤5 tools.
+- If user requests a mega-agent, produce a decomposition plan and note trade-offs.

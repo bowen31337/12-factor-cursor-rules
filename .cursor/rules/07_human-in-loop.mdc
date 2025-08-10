@@ -1,0 +1,8 @@
+---
+description: Model humans as structured tools for approvals.
+globs: []
+alwaysApply: true
+---
+- Human approvals are `human_review` tools. Schema: `{review_id, prompt, options:[approve,modify,reject], deadline}`.
+- If action requires human consent, return a `human_review` action rather than executing side-effects.
+- Log reviewer_id, decision, and decision rationale in the audit log.

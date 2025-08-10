@@ -1,0 +1,13 @@
+---
+description: Deterministic orchestration guidelines.
+globs: []
+alwaysApply: true
+---
+- Complex branching and orchestration must live in deterministic code. Use the model only for intent/interpretation and small decisions.
+- If the assistant suggests a flow, output it as DSL-like JSON:
+
+```json
+{"flow":[{"step":"validate","on_success":"call_api","on_failure":"human_review"}]}
+```
+
+- Never assume the assistant will re-run earlier steps; orchestration code must be explicit.

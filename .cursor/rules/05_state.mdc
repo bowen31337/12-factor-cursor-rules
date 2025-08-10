@@ -1,0 +1,8 @@
+---
+description: Canonical state model and provenance logging.
+globs: []
+alwaysApply: true
+---
+- Use a single canonical state object per run: `{run_id, step, prev_state_hash, outputs[], metadata}`.
+- On each action, emit: `ACTION_EVENT {action, inputs, outputs, timestamp, actor}` to the audit log.
+- Avoid duplicative state stores; reducers compute next state from `prev_state + action`.

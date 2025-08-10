@@ -1,0 +1,8 @@
+---
+description: Multi-ingress trigger rules (API, UI, webhooks, cron).
+globs: []
+alwaysApply: true
+---
+- Normalize all triggers to a canonical `start_run` payload: `{source, user_id, trigger_meta, initial_inputs}`.
+- Validate sources and apply rate limits / auth checks before enqueuing the run.
+- For scheduled runs include `schedule_id` and last-run hash in metadata.

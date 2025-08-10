@@ -1,0 +1,8 @@
+---
+description: Structured error reporting & retry semantics.
+globs: []
+alwaysApply: true
+---
+- Errors must be compact JSON: `{code, summary, retryable:true/false, details(optional)}`.
+- Provide exact retry conditions and idempotency keys where relevant.
+- For model hallucinations, tag as `code:MODEL_UNTRUSTED_OUTPUT` and require schema re-validation before retry.

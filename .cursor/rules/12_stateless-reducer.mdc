@@ -1,0 +1,8 @@
+---
+description: Reducer pattern for state transitions.
+globs: []
+alwaysApply: true
+---
+- Reducer contract: `next_state = reducer(prev_state, action)` is deterministic and pure.
+- Reducer must be unit-tested; when assistant suggests state changes, output both `action` and `reducer_patch` preview.
+- Keep persisted state minimized; prefer snapshots + events for large histories.

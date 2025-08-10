@@ -1,0 +1,9 @@
+---
+description: Context selection, retrieval and compression rules.
+globs: []
+alwaysApply: true
+---
+- Always list sources used for context (vector chunks, docs, session state) at the top of the response.
+- Prefer retrieval → summarize pipeline: Retriever -> top-K chunks -> compressor -> short summary.
+- Do not exceed the configured context budget: if >budget, compress oldest or least-relevant content first.
+- Use explicit markers: [CONTEXT-START] ... [CONTEXT-END].

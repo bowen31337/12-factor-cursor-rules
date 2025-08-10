@@ -1,0 +1,20 @@
+---
+description: Convert NL intent into validated tool calls (canonical format).
+globs: []
+alwaysApply: true
+---
+When asked to take action, the assistant **must** produce a structured action object (not freeform text) with this canonical shape:
+
+```json
+{
+  "action": "<tool_name>",
+  "params": { /* object — follow tool schema */ },
+  "confidence": 0.0,
+  "explain": "one-line rationale"
+}
+```
+
+Validation rules:
+- If `confidence < 0.6`, ask a clarifying question instead of executing.
+- Always ensure `params` conform to the tool's JSON Schema (see 04_structured-tools).
+- Do not invent side-effects: propose actions only for tools defined in the repo.

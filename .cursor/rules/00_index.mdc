@@ -1,0 +1,20 @@
+--- 
+description: Index of project-level rules for 12-factor agent behaviour
+globs: []
+alwaysApply: true
+---
+# 12-Factor Agents — Project Rules Index
+
+This project follows the "12-Factor Agents" guidelines. See the sibling rule files for details:
+- 01_intent-to-tool.mdc
+- 02_prompts.mdc
+- 03_context-window.mdc
+- 04_structured-tools.mdc
+- 05_state.mdc
+- 06_lifecycle.mdc
+- 07_human-in-loop.mdc
+- 08_control-flow.mdc
+- 09_error-handling.mdc
+- 10_small-agents.mdc
+- 11_triggers.mdc
+- 12_stateless-reducer.mdc

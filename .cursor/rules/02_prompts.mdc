@@ -1,0 +1,9 @@
+---
+description: Prompts must be versioned, short, and testable.
+globs: []
+alwaysApply: true
+---
+- Treat prompts as code: reference a prompt id and short description.
+- Each generated prompt should include a one-line "purpose" and "constraints" section.
+- When editing prompts, produce a changelog comment: `PROMPT-CHANGE: <date> <reason>`.
+- Prefer modular prompt fragments (system + persona + task + constraints) and reference them by name.
